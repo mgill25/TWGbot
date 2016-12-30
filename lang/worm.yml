@@ -1,0 +1,236 @@
+stranger:
+  lang:
+    description: "Master-stranger Protocols (Worm theme)"
+    author: "vereornox"
+  command:
+    start: "start"
+    vote: "vote"
+    votes: "votes"
+    abstain: "abstain"
+    join: "join"
+    lang: "lang"
+    langs: "langs"
+  general:
+    plzhold: "Chill out...I'm not ready yet %{nick}. Give me a few seconds."
+    noops: "I require channel ops before starting a game."
+    ready: "TWormG bot is now up and running! Say !start to start a new game."
+    deopped: "Cancelling game - I have been deopped!"
+    rename: "Player %{oldnick} is now known as %{nick}"
+  start:
+    start: "TWormG has been started by %{nick}!"
+    registration: "Registration is now open, say !join to join the game within %{limit} seconds. A minimum of %{players} players is required to play TWormG."
+    skipmessage: "Say !start again to skip the wait when everybody has joined"
+    joined: "%{player} has joined the game (%{number}/%{min})"
+    forcejoined: "%{player} has been forced to join the game (%{number}/%{min})"
+    almostready: "%{secs} seconds left to !join. %{number} out of a minimum of %{min} players joined so far."
+    starting: "Master-Stranger Protocols are now in effect! Players are: %{players}"
+    rolesoon: "You will shortly receive your role via private message"
+    enoughplayers:
+      - "Not enough players to start a game, sorry. You can !start another if you find more players."
+      - "Not enough players to start a game, sorry. You could !start another if you had some friends."
+    error:
+      - "An unexpected error occurred, the game could not be started."
+      - "Well shit, something has gone wrong."
+  roles:
+    normal:
+      - "You're a PRT squaddie."
+      - "Ain't nothing special about you, besides the fact that you GRADUATED THE TOP OF YOUR CLASS IN PRT SQUAD ACADEMY."
+      - "You secretly hoped you would get powers one day. Instead, you ended up working at the PRT."
+      - "Only a few years more and you can become PRT Director. Of course, surviving until then would be a difficult thing without powers."
+    wolf:
+      one:
+        - "You are a lone STRANGER."
+        - "You're a sneaky infiltrating Parahuman. Nana nana nana nana stranger-Man!"
+        - "Fuck off, Imp."
+      other:
+        - "You are a STRANGER infiltrating together with: %{wolves}"
+        - "You are a STRANGER! You're not the only one either! Say hi to %{wolves}"
+  day:
+    enter:
+      solicit:
+        nokill: "It is now QUARANTINE DAY %{day}: Talk to your fellow PRT Squaddies about this unusual and eery silence! You have %{secs} seconds to vote on who to lynch by saying !vote <nickname>. If you change your mind, !vote again."
+        kill:
+          - "It is now QUARANTINE DAY %{day}: Gossip with your fellow PRT Squaddies about %{killed}'s timely demise. You have %{secs} seconds to vote on who to lynch by saying !vote <nickname>. If you change your mind, !vote again."
+          - "It is now QUARANTINE DAY %{day}: Talk to your fellow PRT Squaddies about %{killed}'s sad offing. You have %{secs} seconds to vote on who to lynch by saying !vote <nickname>. If you change your mind, !vote again."
+          - "It is now QUARANTINE DAY %{day}: Talk to your fellow PRT Squaddies about %{killed}'s unfortunate perishment. You have %{secs} seconds to vote on who to lynch by saying !vote <nickname>. If you change your mind, !vote again."
+    exit:
+      novotes:
+        - "Voting over! No votes were cast."
+        - "Voting over! No votes were cast. I don't know why I even bother."
+      abstain: "Voting over! The PRT Squaddies voted for peace... ლ(ಠ益ಠლ) That seems pretty silly."
+      lynch:
+        - "Voting over! The baying mob has spoken - %{killed} will die!"
+        - "Voting over! The raging mob reaches agreement - %{killed} must die!"
+        - "Voting over! A screaming mob wants %{killed} dead!"
+      suspense:
+        - "Everybody turns slowly toward %{killed}, who backs into a corner. With a savage array of kicks and punches, and Steve who emptied at least two clips, %{killed} is no more. The Squaddies check the body..."
+        - "Everybody turns toward %{killed}. The end is quick but certainly not painless - %{killed} is dead. The Squaddies immediately work onto confirming that they were justified..."
+        - "%{killed} tries to flee, evacuating their bowels on the way. The spry mob is too quick - %{killed} is dead."
+      result:
+        wolf:
+          - "...their face falls off. The stranger is dead. Master-stranger protocols are lifted."
+        normal:
+          - "...it was a fellow Squaddie. They say to tell their spouse they're sorry for not being able to attend their kid's birthday."
+          - "...the paranoia led to the death of an innocent. The PRT Squaddies mourn for a few minutes. Nobody really liked that guy."
+          - "...the autograph by Miss Militia falls out of the corpse's pockets. The other Squaddies remember that he got that just a while ago. An innocent died."
+    almostready:
+      yet:
+        - "Voting closes in %{secs} seconds! Yet to vote: %{absentees}"
+        - "Voting closes in %{secs} seconds! Yet to vote: %{absentees} (sort yourselves out)"
+        - "Voting closes in %{secs} seconds! Yet to vote: %{absentees} (pay more attention)"
+      everybody:
+        - "Voting closes in %{secs} seconds! Everybody has voted, but it's not too late to change your mind..."
+        - "Voting closes in %{secs} seconds! Everybody has voted, but it definitely isn't too late to change your mind..."
+        - "Voting closes in %{secs} seconds! Everybody has voted. Don't forget you can always change your vote..."
+        - "Voting closes in %{secs} seconds! Everybody has voted. It's definitely not too late to reconsider..."
+        - "Voting closes in %{secs} seconds! Everybody has voted. Don't even think about changing your vote."
+  night:
+    enter:
+      - "It's hard to tell that it's NIGHT %{night} considering the lack of non-barred windows. PRT Squaddies, try to sleep with one eye open. strangers, you have %{secs} seconds to decide who to shank tonight."
+      - "It is now NIGHT %{night}. The rations are running dry. PRT Squaddies, go to bed. strangers, you have %{secs} seconds to decide who looked at you wrong this morning."
+      - "It is now NIGHT %{night}. The lights flicker a few times. PRT Squaddies, sleep soundly. strangers, you have %{secs} seconds to decide who to pounce upon."
+      - "It is now NIGHT %{night}. It's unreasonably cold . PRT Squaddies, hold each other tight, get some sleep. strangers, you have %{secs} seconds to decide who rejected you despite knowing you for fifteen years."
+    solicit:
+      one: "It is now NIGHT %{night}: To choose who will die tonight say !vote <nickname> to me. You can !vote again if you change your mind."
+      other: "It is now NIGHT %{night}: To choose the object of your bloodlust say !vote <nickname> to me. You can !vote again if you change your mind. If you vote differently to your pack a target will be chosen at random from your tied votes."
+    exit:
+      body:
+        - "A bloodcurdling scream sounds throughout the PHQ. Everybody rushes to find the broken body of %{killed} lying on the ground. %{killed}, another Squaddie, is dead."
+        - "A bloodcurdling scream breaks the peaceful morning. People saunter over, yawning, to see the shredded neck of %{killed}. %{killed}, a Squaddie, is dead."
+        - "A piercing shriek shatters the early-morning silence. You'd recognise %{killed}'s piercing shriek any day. %{killed}, a Squaddie, is dead."
+      nobody:
+        - "Everybody wakes, bleary eyed. There doesn't appear to be a body! Nobody was murdered during the night!"
+        - "Everybody wakes, well rested. After some scouting around there's no sign of a body. Nobody was murdered during the night!"
+        - "Everybody wakes, some quicker than others who need an extra poke. No one died last night."
+  vote:
+    noplayer:
+      - "%{votee} is not a player in this game."
+      - "%{votee} is not a player in this game. Keep up."
+    day:
+      vote: "%{voter} voted for %{votee}"
+      changed: "%{voter} changed their vote from %{origvotee} to %{votee}"
+      abstain: "%{voter} has voted not to lynch"
+      dead:
+        - "Good news %{voter}, %{votee} is already dead and you couldn't be happier."
+        - "Good news %{voter}, %{votee} is already dead, time for a glass of champange!"
+        - "Your good friend %{votee} is dead, %{voter}."
+        - "%{voter} has volunteered to burn %{votee}'s body."
+        - "%{voter} kisses %{votee}'s cheek a final goodbye."
+        - "When no-one is looking, %{voter} goes through the pockets of %{votee} and nabs their wallet and phone."
+        - "%{voter} grabs the bag of %{votee} but only finds a note book containing poems."
+    night:
+      vote: "You have voted for %{votee} to be killed tonight"
+      changed: "You have changed your vote to %{votee}"
+      abstain: "You have decided to try and find something else to do rather than kill someone."
+      dead: "%{votee} is already dead you muppet"
+      samerole: "You can't vote for one of your own kind!"
+      self: "There is an error between the seat and the keyboard!"
+  votes:
+    abstain:
+      one: "%{count} peaceful soul has voted not to lynch (%{players})"
+      other: "%{count} peaceful souls have voted not to lynch (%{players})"
+    message:
+      one: "%{votee} has %{count} vote (%{voters})"
+      other: "%{votee} has %{count} votes (%{voters})"
+  victory:
+    wolfreveal:
+      one:
+        - "With a bloodcurdling scream, the stranger %{wolf}'s eyes light up and teeth glint in the candle light. The remaining PRT Squaddies don't stand a chance."
+        - "%{wolf} turns to face the remaining PRT Squaddies, wearing only a gleeful smile and some underwear. A very dangerous, pointy smile. Ya'll dead."
+      other:
+        - "With a bloodcurdling scream, the %{count} remaining triumphant strangers show their teeth. The remaining PRT Squaddies don't stand a chance."
+        - "The %{count} strangers grin toothily at each other. Such a pitiful lynch mob of PRT Squaddies could never hope to take on multiple speedy strangers."
+    wolf: "Game over! The lone stranger %{wolf} wins!"
+    wolves:
+      one: "Game over! The last remaining stranger %{wolves} wins!"
+      other: "Game over! The remaining strangers (%{wolves}) win!"
+      all: "Game over! The vamipres (%{wolves}) win!"
+    human:
+      one: "Game over! The lone stranger %{wolves} was unable to deceive the humans."
+      other: "Game over! The stranger (%{wolves}) were unable to deceive the humans."
+  seer:
+    command: "see"
+    role: "You are the PRECOG. Each night you can have the role of a player of your choice revealed."
+    solicit: "It is now NIGHT %{night}: say !see <nickname> to me to reveal their role."
+    awake:
+      - "Everyone is wide awake, using your powers now would cause suspicion."
+      - "Everyone is wide awake!"
+    killed: "While confirming your suspicions about %{target}, you are turned into a human pincushion. Your Thinker rating didn't see that one coming!"
+    target:
+      confirm: "%{target}'s identity will be revealed to you by tomorrow morning."
+      change: "You have changed the target of tonight's target to %{target}."
+      nosuch: "%{target} isn't a player in this game."
+      dead: "%{target} is dead, pay attention."
+      self: "Surely you know what you are... try again."
+    reveal:
+      dead: "You have a vision of %{target}'s body, twisted, broken, with holes in the neck. A stranger got there before you."
+      wolf: "You have a dream about %{target} going through classified files in the PHQ. You've found a stranger."
+      vigilante: "You have a dream about %{target} in costume. It looks like %{target} is a PRT member."
+      normal: "You have a dream about %{target} getting shit from Piggot. It looks like %{target} is a fellow PRT Squaddie."
+  vigilante:
+    command: "shoot"
+    role:
+      l1: "You are the VIGILANTE. You have found Shadow Stakler's crossbow amongst the rubble, but it only has one shoddy arrow remaining."
+      l2: "Once during any QUARANTINE DAY you can say !shoot <player> (in the channel, not privately) and hopefully the arrow will survive the impact."
+    shoot:
+      self:
+        success: "%{vigilante} pulls out a crossbow and commits suicide."
+        fail: "%{vigilante} pulls out a crossbow and tries to commit suicide but manages to just shoot themself in the foot. %{vigilante} can't even kill themself properly..."
+      other:
+        success: "%{vigilante} pulls out a crossbow and shoots %{target}"
+        fail: "%{vigilante} pulls out a crossbow and tries to shoot %{target}, but the arrow wobbles off course, missing %{target} and breaking against a wall."
+    reaction:
+      self: "The PRT Squaddies had known that %{target} was having issues in the stranger infested PHQ and frankly don't really care about %{target}'s death."
+      other: "The PRT Squaddies, despite their shock at the sudden discovery of a crossbow, shuffle forward to look at %{target}'s fallen body..."
+    reveal:
+      self: "%{vigilante}'s single arrow was put to waste in its maker's heart instead of a stranger."
+      wolf:
+        l1: "... and jump back in horror as %{target} lets out a buttock-clenching death-hiss and turns into someone else!"
+        l2: "%{vigilante}'s single arrow found its true home in the heart of %{target}!"
+      seer:
+        l1: "... and a tinkling crash cuts through the silence as a note from %{target}'s sleeve. An crumpled application form to join the Protectorate as a precog Thinker. Someone must've triggered recently but didn't tell."
+        l2: "%{vigilante} just killed the precog! What hope now remains?"
+      normal:
+        l1: "... the brave %{brave} steps forward and rolls %{target} over with their toe, but nothing happens."
+        l2: "%{vigilante}'s single arrow was wasted on %{target} - a fellow PRT Squaddie."
+    over: "The PRT Squaddies all agree that a bit of a sit down, a glass of sherry and an early bedtime is in order after the day's exciting events"
+  witch:
+    command: "save"
+    role: "You are a MEDIC! Each night you can stay awake and save someone who has been attacked by a stranger, you can save someone only once during the game."
+    prepare: "It is now NIGHT %{night}. Once the stranger vote is over you will have only 10 seconds to decide if you want to save the victim (by saying '!save')"
+    tensecs: "It's almost dawn - get ready!"
+    wolfvoteover: "Time's up! voting is now closed."
+    peaceful: "You've been listening closely for signs of a struggle, but it's been peaceful all night."
+    comingforyou: "Suddenly a gust of wind howls past and someone stands in front of you. You're the victim tonight."
+    toolate: "The white sheet draped across the pews is ripped apart. What's on the menu tonight? You. You are."
+    choose:
+      one: "You spill a glass of water, the voice of %{target} calls out in surprise."
+      other: "Whilst smoking a cigarette quietly in the corner, you suddenly have the feeling something is wrong with %{target}."
+      instruct:
+        one: "Say '!save' if you wish to save this player, quickly!"
+        other: "Say '!save <playername>' to choose which player to visit. Either could by the real target. Saying '!save on its own will pick randomly."
+    choosedanger:
+      one: "You hear noises coming from %{target}, and get the horrible feeling something is stalking you too."
+      other: "You hear noises coming from: %{target}, and get the horrible feeling something is creeping up on you too."
+      instruct:
+        one: "Say '!save' if you wish to save this player. There's a 50/50 chance you're going to die first."
+        other: "Say '!save <playername>' to choose which player to save. Either could by the real target, and so could you. Saying '!save on its own will pick randomly."
+    nottarget: "'%{player}' isn't in danger here! Do you not understand the gravity of the situation?"
+    unambiguous: "Phew. You got there just in time to clean up %{target}'s wounds."
+    ambiguous:
+      success: "Phew. You chose to run towards %{player}, and that's exactly where the murderous stranger was heading for a meal."
+      fail: "Oh no. You chose to run towards %{save}, but the real target was %{target}."
+      failhard: "Oh no. You chose to run towards %{save}, but it was YOU that was chosen for tonight's murder."
+    channelsuccess: "Everyone wakes and gathers in an office to find out who has been viciously savaged during the night. It seems like %{saved} might have been taken, until they wander in late, with a few scratches and small knife wounds."
+    privatesuccess: "You were attacked by a stranger last night. All was lost. You were walking towards the light when suddenly you hear %{witch}'s voice. %{witch} saved you!"
+  invite:
+    command: "invite"
+    spam: "%{target} has been invited to join the channel recently, try again later."
+    noops: "Can't invite players, I don't have channel ops."
+    ratelimit: "The !invite command is rate-limited. Try again in %{secs} seconds."
+    nouser: "No user called %{target} online, sort it out."
+    confirm: "I have invited %{target} to join the channel."
+  resign:
+    command: "resign"
+    announce: "%{player} has committed suicide rather than harm a soul in the church."
+    unjoined: "%{player} has left the game (%{count}/%{min})"
